@@ -1,31 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-header {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8em;
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+
+.main-nav .nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav .nav-link:hover, .main-nav .nav-link.active {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.user-nav i {
+    font-size: 1.5em;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
 /* --- Hero Section (Gaya Minimalis Baru) --- */
 .hero-minimal {
-    height: 100vh; /* Tinggi 100% dari layar */
-    background-color: #000000; /* Hitam pekat */
+    height: 100vh;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Mencegah ada scrollbar aneh */
+    overflow: hidden;
 }
 
 .boot-logo {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3.5em; /* Ukuran bisa disesuaikan */
+    font-size: 3.5em;
     color: #ffffff;
     letter-spacing: 10px;
-    /* Efek animasi bersinar (berdenyut) */
     animation: pulse-glow 3s infinite ease-in-out;
 }
 
-/* Keyframes untuk animasi */
 @keyframes pulse-glow {
     0% {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
     }
     50% {
-        text-shadow: 0 0 20px rgba(0, 209, 255, 0.7); /* Bersinar dengan warna aksen Vynix */
+        text-shadow: 0 0 20px rgba(0, 209, 255, 0.7);
     }
     100% {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+}
+
+
+.content-rows {
+    padding: 20px 40px;
+}
+
+.row-container {
+    margin-top: 40px;
+}
+
+.row-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.thumbnail-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+
+.thumbnail-container::-webkit-scrollbar {
+    display: none;
+}
+
+.thumbnail {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #141414;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.modal-poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ======================================= */
+/* === MEDIA QUERIES (untuk HP/Tablet) === */
+/* ======================================= */
+@media (max-width: 768px) {
+    .main-header, .content-rows {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .boot-logo {
+        font-size: 1.8em; /* Perkecil logo di HP */
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+    
+    .thumbnail {
+        width: 150px;
+    }
+    
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 15% auto;
+        width: 90%;
     }
 }
