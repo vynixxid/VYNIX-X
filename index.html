@@ -3,65 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VYNIX</title>
+    <title>VYNIX - Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">V Y N I X</div>
-        <nav class="main-nav">
-            <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">Series</a>
-            <a href="#" class="nav-link">Movies</a>
-        </nav>
-        <div class="user-nav">
-            <i class='bx bx-search'></i>
-            <i class='bx bxs-user-circle'></i>
-        </div>
-    </header>
+    <div id="preloader">
+        <div class="boot-logo">V Y N I X</div>
+    </div>
 
-    <main>
-        <section class="hero-minimal">
-            <div class="boot-logo">V Y N I X</div>
-        </section>
+    <div id="main-content" class="hidden">
+        <header class="main-header">
+            <a href="index.html" class="logo">V Y N I X</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="series.html" class="nav-link">Series</a>
+                <a href="movies.html" class="nav-link">Movies</a>
+            </nav>
+            <div class="user-nav">
+                <i class='bx bx-search'></i>
+                <i class='bx bxs-user-circle'></i>
+            </div>
+        </header>
 
-        <section class="content-rows">
-            <div class="row-container">
-                <h3 class="row-title">Trending Now</h3>
-                <div class="thumbnail-container">
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/0a0a0a/fff?text=Film+1" alt="Thumbnail 1"></div>
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/1a1a1a/fff?text=Film+2" alt="Thumbnail 2"></div>
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/2a2a2a/fff?text=Film+3" alt="Thumbnail 3"></div>
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/3a3a3a/fff?text=Film+4" alt="Thumbnail 4"></div>
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/4a4a4a/fff?text=Film+5" alt="Thumbnail 5"></div>
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/5a5a5a/fff?text=Film+6" alt="Thumbnail 6"></div>
+        <main>
+            <section class="hero-section">
+                <div class="hero-slide active" style="background-image: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.1)), url('https://placehold.co/1200x800/1a1a1a/444?text=CYBERNETIC+DREAMS');">
+                    <div class="hero-content">
+                        <h1 class="hero-title">CYBERNETIC DREAMS</h1>
+                        <p class="hero-description">In a city run by AI, a rogue consciousness discovers a truth that could shatter reality.</p>
+                        <div class="hero-buttons"><button class="btn btn-primary"><i class='bx bx-play'></i> Play</button><button class="btn btn-secondary"><i class='bx bx-info-circle'></i> More Info</button></div>
+                    </div>
                 </div>
-            </div>
-            <div class="row-container">
-                <h3 class="row-title">New Releases</h3>
-                <div class="thumbnail-container">
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/2a2a2a/fff?text=Film+A" alt="Thumbnail A"></div>
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/3a3a3a/fff?text=Film+B" alt="Thumbnail B"></div>
-                    <div class="thumbnail"><img src="https://placehold.co/200x300/4a4a4a/fff?text=Film+C" alt="Thumbnail C"></div>
+                <div class="hero-slide" style="background-image: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.1)), url('https://placehold.co/1200x800/444/1a1a1a?text=ECHOES+OF+NEBULA');">
+                    <div class="hero-content">
+                        <h1 class="hero-title">ECHOES OF NEBULA</h1>
+                        <p class="hero-description">A lone astronaut receives a distress signal from a star system thought to be uninhabited.</p>
+                        <div class="hero-buttons"><button class="btn btn-primary"><i class='bx bx-play'></i> Play</button><button class="btn btn-secondary"><i class='bx bx-info-circle'></i> More Info</button></div>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+                <button class="slider-nav prev">&#10094;</button>
+                <button class="slider-nav next">&#10095;</button>
+            </section>
 
-    <div id="movieModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img id="modalPoster" src="https://placehold.co/200x300/141414/fff?text=Poster" alt="Movie Poster" class="modal-poster">
-            <div class="modal-text">
-                <h2 id="modalTitle">Judul Film</h2>
-                <p id="modalDescription">Ini adalah deskripsi atau sinopsis dari film yang akan tampil di sini.</p>
-                <button class="btn btn-primary"><i class='bx bx-play'></i> Play</button>
-            </div>
+            <section class="content-rows">
+                <div class="row-container"><h3 class="row-title">Trending Now</h3><div class="thumbnail-container"><div class="thumbnail"><img src="https://placehold.co/200x300/0a0a0a/fff?text=Film+1" alt="Thumbnail 1"></div><div class="thumbnail"><img src="https://placehold.co/200x300/1a1a1a/fff?text=Film+2" alt="Thumbnail 2"></div><div class="thumbnail"><img src="https://placehold.co/200x300/2a2a2a/fff?text=Film+3" alt="Thumbnail 3"></div><div class="thumbnail"><img src="https://placehold.co/200x300/3a3a3a/fff?text=Film+4" alt="Thumbnail 4"></div><div class="thumbnail"><img src="https://placehold.co/200x300/4a4a4a/fff?text=Film+5" alt="Thumbnail 5"></div></div></div>
+                <div class="row-container"><h3 class="row-title">New AI-Generated Releases</h3><div class="thumbnail-container"><div class="thumbnail"><img src="https://placehold.co/200x300/2a2a2a/fff?text=Film+A" alt="Thumbnail A"></div><div class="thumbnail"><img src="https://placehold.co/200x300/3a3a3a/fff?text=Film+B" alt="Thumbnail B"></div><div class="thumbnail"><img src="https://placehold.co/200x300/4a4a4a/fff?text=Film+C" alt="Thumbnail C"></div><div class="thumbnail"><img src="https://placehold.co/200x300/5a5a5a/fff?text=Film+D" alt="Thumbnail D"></div></div></div>
+                <div class="row-container"><h3 class="row-title">Sci-Fi Wonders</h3><div class="thumbnail-container"><div class="thumbnail"><img src="https://placehold.co/200x300/112/fff?text=Sci-1" alt="Thumbnail S1"></div><div class="thumbnail"><img src="https://placehold.co/200x300/223/fff?text=Sci-2" alt="Thumbnail S2"></div><div class="thumbnail"><img src="https://placehold.co/200x300/334/fff?text=Sci-3" alt="Thumbnail S3"></div></div></div>
+            </section>
+        </main>
+
+        <div id="movieModal" class="modal"><div class="modal-content"><span class="close-button">&times;</span><img id="modalPoster" src="https://placehold.co/200x300/141414/fff?text=Poster" alt="Movie Poster" class="modal-poster"><div class="modal-text"><h2 id="modalTitle">Judul Film</h2><p id="modalDescription">Ini adalah deskripsi atau sinopsis dari film.</p><button class="btn btn-primary"><i class='bx bx-play'></i> Play</button></div></div></div>
+        
+        <div id="player-overlay" class="hidden">
+            <video id="main-player" controls></video>
+            <button id="close-player">&times;</button>
         </div>
     </div>
 
